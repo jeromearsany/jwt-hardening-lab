@@ -1,6 +1,6 @@
 # 🛡️ Assignment 2: JWT Hardening Submission
 
-**Student Name:** [Your Name Here]
+**Student Name:** Jerome Arsany Mansour Farah
 
 ---
 
