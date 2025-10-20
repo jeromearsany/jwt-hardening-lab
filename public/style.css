@@ -1,0 +1,91 @@
+/* public/style.css -- simple, readable lab styling */
+
+:root{
+  --bg: #f6f8fa;
+  --card: #ffffff;
+  --accent: #2b7cff;
+  --muted: #6b7280;
+  --mono-bg: #0f1720;
+  --mono-green: #bada55;
+  --radius: 10px;
+  --maxw: 960px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;background:var(--bg);color:#111}
+
+.container{
+  max-width:var(--maxw);
+  margin:28px auto;
+  padding:18px;
+}
+
+header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}
+h1{font-size:1.5rem;margin:0}
+.lead{color:var(--muted);font-size:0.95rem;margin-top:6px}
+
+/* layout */
+.grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:16px;
+  align-items:start;
+}
+
+/* card */
+.card{
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:16px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.06);
+}
+
+/* forms */
+label{display:block;font-size:0.9rem;margin-bottom:6px;color:var(--muted)}
+input[type="text"], input[type="password"]{
+  width:100%;
+  padding:10px 12px;
+  border:1px solid #e6e9ee;
+  border-radius:8px;
+  font-size:0.95rem;
+  outline:none;
+}
+input[type="text"]:focus, input[type="password"]:focus{border-color:var(--accent);box-shadow:0 0 0 4px rgba(43,124,255,0.06)}
+
+button{
+  background:var(--accent);
+  color:white;
+  border:none;
+  padding:10px 14px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:600;
+}
+button:active{transform:translateY(1px)}
+button.secondary{
+  background:#eef2ff;color:var(--accent);border:1px solid rgba(43,124,255,0.12)
+}
+
+/* small utilities */
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.small{font-size:0.9rem;color:var(--muted)}
+.note{font-size:0.85rem;color:#374151;margin-top:8px}
+
+/* output console */
+.console{
+  background:var(--mono-bg);
+  color:var(--mono-green);
+  padding:12px;
+  border-radius:8px;
+  height:160px;
+  overflow:auto;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace;
+  font-size:0.9rem;
+  white-space:pre-wrap;
+  word-break:break-word;
+}
+
+/* responsive */
+@media (max-width:900px){
+  .grid{grid-template-columns:1fr}
+}

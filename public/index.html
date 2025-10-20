@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JWT Auth Lab</title>
+  <style>
+    body{font-family:Arial;margin:20px} input{display:block;margin:6px 0;padding:6px;width:300px}
+    button{padding:6px 10px}
+    pre{background:#111;color:#bada55;padding:10px}
+  </style>
+</head>
+<body>
+  <h1>JWT Auth Lab</h1>
+  <p>Servers: Vulnerable (http://localhost:1234) and Secure (http://localhost:1235)</p>
+
+  <h2>Login (choose server by URL)</h2>
+  <label>Server URL: <input id="serverUrl" value="http://localhost:1234"></label>
+  <form id="loginForm">
+    <input id="username" placeholder="username" value="admin">
+    <input id="password" placeholder="password" value="adminpass" type="password">
+    <button>Login</button>
+  </form>
+
+  <div>
+    <button id="whoamiBtn">Whoami (decode token)</button>
+    <button id="adminBtn">GET /admin</button>
+    <button id="refreshBtn">POST /refresh (secure server only)</button>
+    <pre id="out"></pre>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
